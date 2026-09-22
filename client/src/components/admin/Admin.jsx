@@ -14,7 +14,7 @@ function Adminmenu() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/hotels")
+      .get("https://hotel-management-system-pjil.onrender.com/api/hotels")
       .then((res) => {
         dispatch(setHotels(res.data.hotels));
       })
@@ -30,7 +30,7 @@ function Adminmenu() {
     }
 
     axios
-      .delete(`http://localhost:3000/api/hotels/${id}`)
+      .delete(`https://hotel-management-system-pjil.onrender.com/api/hotels/${id}`)
       .then(() => {
         dispatch(removeHotel(id));
         alert("Hotel deleted successfully");
@@ -56,7 +56,7 @@ function Adminmenu() {
             src={
               hotel.image.startsWith("http")
                 ? hotel.image
-                : `http://localhost:3000/${hotel.image.replace(/^\/+/, "")}`
+                : `https://hotel-management-system-pjil.onrender.com/${hotel.image.replace(/^\/+/, "")}`
             }
             alt={hotel.title}
           />

@@ -5,7 +5,7 @@ function HotelCard({ hotel }) {
 
   const imageUrl = hotel.image.startsWith("http")
     ? hotel.image
-    : `http://localhost:3000/${hotel.image.replace(/^\/+/, "")}`;
+    : `https://hotel-management-system-pjil.onrender.com/${hotel.image.replace(/^\/+/, "")}`;
 
   return (
     <div

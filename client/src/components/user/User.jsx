@@ -23,7 +23,7 @@ function User() {
 
     axios
       .get(
-        `http://localhost:3000/api/hotels?search=${search}&minPrice=${minPrice}&maxPrice=${maxPrice}&offset=${offset}&limit=${limit}`
+        `https://hotel-management-system-pjil.onrender.com/api/hotels?search=${search}&minPrice=${minPrice}&maxPrice=${maxPrice}&offset=${offset}&limit=${limit}`
       )
       .then((res) => {
         dispatch(setHotels(res.data.hotels));
@@ -42,7 +42,7 @@ function User() {
 
     axios
       .get(
-        `http://localhost:3000/api/hotels?search=${search}&minPrice=${minPrice}&maxPrice=${maxPrice}&offset=0&limit=${limit}`
+        `https://hotel-management-system-pjil.onrender.com/api/hotels?search=${search}&minPrice=${minPrice}&maxPrice=${maxPrice}&offset=0&limit=${limit}`
       )
       .then((res) => {
         dispatch(setHotels(res.data.hotels));

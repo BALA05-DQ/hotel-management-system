@@ -13,7 +13,7 @@ function HotelDetail() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/hotels")
+      .get("https://hotel-management-system-pjil.onrender.com/api/hotels")
       .then((res) => {
         const hotels = res.data.hotels;
 
@@ -62,7 +62,7 @@ function HotelDetail() {
 
   const imageUrl = hotel.image.startsWith("http")
     ? hotel.image
-    : `http://localhost:3000/${hotel.image.replace(/^\/+/, "")}`;
+    : `https://hotel-management-system-pjil.onrender.com/${hotel.image.replace(/^\/+/, "")}`;
 
   return (
     <div className="hotel-detail">

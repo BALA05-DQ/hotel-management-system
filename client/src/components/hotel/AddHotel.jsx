@@ -44,7 +44,7 @@ function AddHotel() {
 
     try {
       const res = await fetch(
-        "http://localhost:3000/api/hotels",
+        "https://hotel-management-system-pjil.onrender.com/api/hotels",
         {
           method: "POST",
           body: data,

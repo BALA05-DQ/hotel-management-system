@@ -21,7 +21,7 @@ function Edit() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/hotels")
+      .get("https://hotel-management-system-pjil.onrender.com/api/hotels")
       .then((res) => {
         const hotel = res.data.hotels.find(
           (hotel) => hotel.id == id
@@ -40,7 +40,7 @@ function Edit() {
           setPreview(
             hotel.image.startsWith("http")
               ? hotel.image
-              : `http://localhost:3000/${hotel.image.replace(/^\/+/, "")}`
+              : `https://hotel-management-system-pjil.onrender.com/${hotel.image.replace(/^\/+/, "")}`
           );
         }
       })
@@ -80,7 +80,7 @@ function Edit() {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/hotels/${id}`,
+        `https://hotel-management-system-pjil.onrender.com/api/hotels/${id}`,
         {
           method: "PUT",
           body: data,
